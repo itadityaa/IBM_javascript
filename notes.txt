@@ -13,14 +13,14 @@ Variable names must start with a letter, underscore, or dollar sign, and can con
 Variables declared with let can be reassigned, but not redeclared within the same block. 
 Valid: 
 {
-let a=9;
-a=12;
+  let a=9;
+  a=12;
 }
 
 Invalid:
 {
-let a=0;
-let a=12; //will give error
+  let a=0;
+  let a=12; // will give error
 }
 
 Variables declared with let can be reassigned, but not redeclared within the same block. 
@@ -36,3 +36,112 @@ Composite:
 Composite data types are those that can hold and manage multiple values as a single unit. These data types are used to organize and manipulate collections of data.
 
 Array and object are two composite data types. An array in JavaScript is a list like data structure for storing multiple value. While an object is a collection of key value pairs used for structured data storage. JavaScript's dynamic typing allows variables to change data types during execution.
+
+Operators in JavaScript are special symbols or keywords used to perform operations on variables and values. JavaScript supports a variety of operators, including: arithmetic operators, comparison operators, logical operators, assignment operators, unary operators, and typeof operators.
+
+Arithmetic operators are used for basic mathematical calculations. Common arithmetic operators include: addition, subtraction, multiplication, division, and modulus. 
+
+Comparison operators are used to compare two values or variables and return a Boolean true or false result. Common comparison operators include: equality, inequality, strict equality, strict inequality, less than, greater than, less than or equal to, and greater than or equal to.
+
+# Example
+let a = 5;
+let b = 6;
+
+let isEqual = a == b; // equality
+let isNotEqual = a != b; // inequality
+let isStrictEqual = a === b; // strict equality
+let isStrictNotEqual = a !==b; // strict inequality
+let isGreaterThan = a > b; // greater than
+let isLessThan = a < b; // less than
+let isGreaterOrEqual = a >= b; // greater than or equality
+let isLessOrEqual = a <= b; // less than or equality
+
+Logical operators are used to combine or manipulate Boolean values. Common logical operators include logical AND, logical OR, and logical NOT.
+&& - AND
+|| - OR
+! - NOT
+
+Unary operators operate on a single value or variable. Common unary operators include increment and decrement.
+let a = 5;
+a++;
+a--;
+
+The typeof operator is a built-in operator in JavaScript that allows you to determine the data type of a variable or an expression. It returns a string representing the type of operand.
+
+The possible return values for typeof are: "Undefined" if the variable is declared but not defined, "Object" for objects, arrays, and null, "Boolean" for Boolean values, "Number" for numbers, and "String" for strings.
+
+let myVar = 42;
+let myVarType = typeof myVar;
+
+An expression is a combination of values, variables, and operators that can be evaluated to produce a single value.
+
+Control flow refers to the order in which statements are executed in a JavaScript program. While conditional statements, often referred to as decision making statements, are used to manage this flow based on specified conditions. Some of the conditional statements in JavaScript are if statement, else if statement, else statement, nested if else statement, switch statement, and ternary operator.
+
+let age = 25;
+let name = "John";
+
+if (age > 18) {
+  console.log("You are an adult");
+} else if (age < 18) {
+  console.log("You are a minor");
+} else {
+  console.log("You are a teenager");
+}
+
+const temperture = 20;
+const isRaining = true;
+
+if (temperature > 18) {
+  if (isRaining) {
+    console.log("It's warm and raining");
+  } else {
+    console.log("It's warm and not raining");
+  }
+} else {
+  console.log("It's cold");
+}
+
+The switch statement allows you to compare a value against multiple possible case values and execute code based on the first matching case.
+
+let day = "Friday";
+switch (day) {
+  case "Monday":
+    console.log("Today is Monday");
+    break;
+  case "Tuesday":
+    console.log("Today is Tuesday");
+    break;
+  case "Wednesday":
+    console.log("Today is Wednesday");
+    break;
+  default:
+    console.log("Have a nice day");
+}
+
+The ternary operator is a concise way to write conditional statements such as if else condition.
+let age = 25;
+let canVote = age >= 18 ? 'yes' : 'no';
+
+A for loop is a control structure in JavaScript that allows you to execute a block of code repeatedly for a specified number of times, or until a particular condition is met. It consists of three parts, initialization, condition, and update. Initialization, this part is where you initialize a loop control variable, typically with an initial value. Condition, this is a Boolean expression that is evaluated before each iteration. If the condition is true, the loop continues, otherwise it terminates. Update, this part is responsible for changing the loop control variable in each iteration, often incrementing or decrementing its value.
+
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+} - prints 0 to 9
+
+A while loop is a control structure in JavaScript that allows you to execute a block of code repeatedly. As long as the specified condition is true, it continually evaluates the condition before each iteration.
+
+let counter = 5;
+while (counter > 0) {
+  console.log(counter);
+  counter--;
+}
+
+A do while loop in JavaScript is a control structure that allows you to execute a block of code repeatedly as long as a specified condition is true. Unlike the for or while loops, a do while loop guarantees that the code block will execute at least once, even if the condition is initially false. The structure of a do while loop is as follows. The code block is executed first, then the condition is checked. If the condition is true, the loop continues and the code block is executed again. If the condition is false, the loop terminates.
+ 
+let roll = 1;
+do {
+  console.log("Roll: " + roll);
+  roll++;
+} while (roll <= 6);
+
+For loops are used when you know the exact number of iterations while, while and do while loops are used when the number of iterations is condition dependent. For loops have an explicit initialization step within the loop header, while while and do while loops require you to initialize the loop control variable before the loop. Do while loops guarantee that their body is executed at least once, while for and while loops may not execute the body at all if the initial condition is false.
