@@ -1,0 +1,38 @@
+In JavaScript, variables are used to store and manage data. Variables act as containers for various types of information or values. You can think of a variable as a named storage location that holds data, and you can use this data in your JavaScript code.
+
+To create a variable in JavaScript, you also need to declare it using one of three keywords, var, let, or const. The declaration tells JavaScript that you want to reserve a spot in memory to store data.
+
+Var was the original way to declare variables in JavaScript, and it has function level scope. This means that a variable declared with var is available throughout the entire function in which it is declared.
+
+Let was introduced in ES6 and provides block level scoping. This means, that a variable declared with let is only available within the block enclosed by curly braces in which it is defined. This scope is more predictable and less error prone.
+
+Const is also introduced in ES6 and is used to declare variables with constant values. Once you assign a value to a const variable, you cannot reassign it a different value. It also has block level scoping. Const variables are often used for values that should not change, such as mathematical constants or references to immutable objects.
+
+Variable names must start with a letter, underscore, or dollar sign, and can contain letters, numbers, underscores, and dollar signs. Variable names are case sensitive.
+
+Variables declared with let can be reassigned, but not redeclared within the same block. 
+Valid: 
+{
+let a=9;
+a=12;
+}
+
+Invalid:
+{
+let a=0;
+let a=12; //will give error
+}
+
+Variables declared with let can be reassigned, but not redeclared within the same block. 
+
+JavaScript is a dynamically typed language, which means that you don't need to explicitly specify the data type of a variable when you declare it. The data type is determined dynamically at runtime based on the value you assign to the variable.
+
+JavaScript has several built-in data types, which can be categorized into the following major categories. Primitive data types, composite data types.
+
+Primitive:
+Strings represents text. A string is enclosed in single or double quotes. Number represents both integers and floating-point numbers. Boolean represents true or false values. Undefined represents a variable that has been declared, but hasn't been assigned a value. Null represents an empty value or absence of any object value.
+
+Composite: 
+Composite data types are those that can hold and manage multiple values as a single unit. These data types are used to organize and manipulate collections of data.
+
+Array and object are two composite data types. An array in JavaScript is a list like data structure for storing multiple value. While an object is a collection of key value pairs used for structured data storage. JavaScript's dynamic typing allows variables to change data types during execution.
