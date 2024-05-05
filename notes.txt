@@ -145,3 +145,47 @@ do {
 } while (roll <= 6);
 
 For loops are used when you know the exact number of iterations while, while and do while loops are used when the number of iterations is condition dependent. For loops have an explicit initialization step within the loop header, while while and do while loops require you to initialize the loop control variable before the loop. Do while loops guarantee that their body is executed at least once, while for and while loops may not execute the body at all if the initial condition is false.
+
+In JavaScript, functions can be categorized into two main types based on their parameters, inputs, non-parameterized functions and parameterized functions.
+
+Non-parameterized functions do not require any parameters to operate. They can perform their tasks without receiving any specific input values. Non-parameterized functions are often used for tasks that rely solely on their internal logic or external factors. Parameterized functions except one or more parameters, also called arguments that provide input data for the function to work with. You define these parameters in the function's declaration, and when you call the function, you pass specific values for those parameters.
+
+Parameters are variables you define in the function declaration to accept input values. Arguments are the actual values you pass to a function when calling it.
+
+There are two ways of writing a function in JavaScript, function declaration, function expression.
+
+Function declaration is the traditional way to define a function. We start by declaring it using the keyword function, then we write the function name and the parameters.
+
+Function expression is another way to define a function in JavaScript. Here we define a function using a variable and store the returned value in that variable.
+
+Types of functions in JavaScript: named function, immediately invoked function expression, IIFE, arrow function and anonymous function.
+
+Named functions have specific names that can be called by their names. They are typically declared using the function keyword and can be defined at any point in your code. Named function expressions are beneficial for debugging because they display the function's name in the call stack, aiding and identifying and tracking bugs in your code.
+
+Immediately invoked function expression, or IIFE, is a function in JavaScript that's defined and executed immediately after its creation. It's often employed to encapsulate variables and code within a private scope, helping to prevent global scope contamination and variable conflicts. 
+
+The arrow function is a more concise way to write functions introduced in ES6. They are often used for short, simple functions. 
+
+Anonymous functions are without a name. These are often used as arguments for other functions or assigned to variables. For example, you can create anonymous functions using the arrow function syntax.
+
+Arrow functions are especially useful for simple one liner functions. Here's an overview of arrow functions. Arrow functions have a more compact and readable syntax. They use a fat arrow to define the function, which is why they're commonly referred to as arrow functions. Arrow functions do not require the function keyword.
+
+const multi = (a, b) => a * b;
+
+Arrow functions can be categorized in two ways, parameterized and non parameterized functions.
+
+const greet = () => {
+    return `Hello, World!`;
+}
+
+The return statement is used to produce an output value from a function. This output can be a specific data value, a calculated result, or even another function. It serves as an exit point for a function. Once a return statement is encountered, the function terminates and the control flow is handed back to the code that called the function. Return enables functions that can be used in various contexts because they provide results that can be captured and used by other parts of your code.
+
+document.getElementById ('length'): This part of the code retrieves an HTML element by its ID, specifically searching for an element with the ID 'length'.
+
+.value: After accessing the HTML element, .value is used to retrieve the value entered into the input field associated with that element. For instance, if a user enters '5' into the input field for length, .value retrieves the string '5'.
+
+parseFloat(…): The parseFloat() function converts the string value retrieved from the input field to a floating-point number. This conversion ensures that the input, typically text entered by the user, is treated as a number and can be used in mathematical operations.
+
+.innerText = `The area of the rectangle is: ${area}`;: Once the element is accessed, .innerText is used to modify the text content within that HTML element.
+
+The backticks and ${} notation allow for the inclusion of JavaScript variables within a string (using template literals).
