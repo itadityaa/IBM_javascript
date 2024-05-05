@@ -189,3 +189,44 @@ parseFloat(…): The parseFloat() function converts the string value retrieved f
 .innerText = `The area of the rectangle is: ${area}`;: Once the element is accessed, .innerText is used to modify the text content within that HTML element.
 
 The backticks and ${} notation allow for the inclusion of JavaScript variables within a string (using template literals).
+
+In Javascript, a function closure is a function that retains access to variables from its enclosing function scope. Even after the enclosing function has finished executing, closures allow you to create private variables, implement data hiding, and maintain state between function calls.
+
+Example closure function- In this example, inner function is a closure because it can access the outer var variable from its containing function, outer function, even after outer function has finished executing.
+
+function outerFunction() {
+  const outerVar = "I am outside!";
+  function innerFunction() {
+    console.log(outerVar); // innerFunction has access to outerVar
+  }
+  return innerFunction;
+}
+
+const closure = outerFunction();
+closure(); // This will log "I am outside!"
+
+Benefits- 
+  1) Data Encapsulation: Closures allow you to encapsulate data within a function scope. Creating a private environment for variables. This is crucial for building modular and maintainable code. As it helps prevent unintended interference or modification of variables from outside the function.
+
+  2) Information Hiding: By using closures, you can hide certain data and expose only the necessary parts of your code's functionality.
+
+Closures enable functions to remember and maintain state between function calls. This is valuable for tasks like implementing counters, timers, or managing application state in event driven programming.
+
+Function hoisting, is a behavior in Javascript where function declarations are moved to the top of their containing scope during the compilation phase, allowing you to use a function before it's actually declared in the code. This behavior only applies to function declarations, not function expressions.
+
+Example: 
+sayHello();
+// This works even though the function is called before it is defined
+
+function sayHello() {
+  console.log("Hello");
+}
+
+greet(); // This will result in an error because greet is an expression and it is not hoisted
+
+const greet = function () {
+  console.log("Hello there");
+};
+
+Benefits:
+Function hoisting can make code more readable and self explanatory, by allowing you to use functions before they are defined in the code. This can improve the logical flow of your code, and make it easier to understand. Hoisted functions can be defined at any point within their containing scope, regardless of the order in which they are called. This flexibility can be helpful when structuring your code and organizing related functions. Function hoisting is crucial for recursive functions, as it allows the function to call itself within its own definition. You can conditionally execute functions based on certain criteria without having to define them in a specific order.
