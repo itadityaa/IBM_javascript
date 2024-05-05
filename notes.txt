@@ -230,3 +230,162 @@ const greet = function () {
 
 Benefits:
 Function hoisting can make code more readable and self explanatory, by allowing you to use functions before they are defined in the code. This can improve the logical flow of your code, and make it easier to understand. Hoisted functions can be defined at any point within their containing scope, regardless of the order in which they are called. This flexibility can be helpful when structuring your code and organizing related functions. Function hoisting is crucial for recursive functions, as it allows the function to call itself within its own definition. You can conditionally execute functions based on certain criteria without having to define them in a specific order.
+
+In Javascript, events are crucial for creating interactive and dynamic web applications, these are actions or occurrences in the browser, such as user interactions, page loading, or mouse movements over elements. Some of the common events in Javascript are click, mouse over, keydown, and change.
+Click event is triggered when a user clicks on an element like a button, mouse over event is triggered when the mouse cursor enters an element like a div, keydown event is triggered by pressing down on a key on the keyboard, and change event is triggered when the value of an input element changes.
+
+Using addEventListener brings several benefits
+
+Readability and maintainability: Decoupling JavaScript from HTML enhances code comprehension and maintenance.
+
+Scalability: As your codebase expands, managing event listeners becomes more straightforward. addEventListener enables easy addition or modification of listeners without HTML changes.
+
+Code reusability: Assigning named functions (for example: handleButtonClick) as event handlers fosters reusable code applicable across various elements or events.
+
+Consistency and best practices: Leveraging addEventListener aligns with modern JavaScript practices, promoting clean code separation and adhering to unobtrusive JavaScript principles.
+
+Multiple event handlers: A single element can host multiple event handlers for the same event, providing flexibility in managing diverse functionalities triggered by one event.
+
+The general syntax for addEventListener is:
+
+element.addEventListener(eventType, handlerFunction)
+
+element: Refers to the HTML element to which you want to attach the event listener.
+
+event type: Specifies the type of event to listen for (for example: 'click', 'change', 'mouseover', and so on).
+
+handlerFunction: JSON stores configuration settings, application states, and structured data in databases or files due to its simplicity and ease of use
+
+Events
+JavaScript events represent user-initiated actions in a web browser, such as mouse and keyboard actions and form or window events, enabling dynamic and interactive web experiences.
+
+1) Mouse events:
+Mouse events in JavaScript pertain to interactions with the mouse pointer in a web document, including clicks, movements over elements, entering/exiting areas, and dragging elements
+
+A) Click event: The click event triggers when a mouse button is pressed and released on an element, indicating a user interaction. In the example, a button with the ID 'clickButton' has a click event listener attached. When clicked, an alert with 'Button clicked!' appears.
+
+// <button id="clickButton">Click Me!</button>
+<script>
+  document.getElementById('clickButton').addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+</script>
+
+B) Mouseover: Mouseover occurs when the mouse enters an element; mouseout happens when it leaves.
+
+// <div id="moveArea" style="width: 200px; height: 200px; background-color: lightcoral;"></div>
+<script>
+  const moveArea = document.getElementById('moveArea');
+  moveArea.addEventListener('mousemove', function(event) {
+    console.log(`Mouse coordinates - X: ${event.clientX}, Y: ${event.clientY}`);
+  });
+</script>
+
+This code creates an HTML <div> element (moveArea) with a light coral background. It attaches a 'mousemove' event listener to moveArea, logging the mouse pointer coordinates to the console on movement.
+
+2) Keyboard events:
+JavaScript's keyboard events, involving key presses, releases, or holds, encompass 'keydown' (press), 'keyup' (release), and 'keypress' (press and hold). These events capture keyboard input, enabling actions based on specific key presses.
+
+A) Keyup and Keydown: 
+
+// <input type="text" id="keyInput">
+<script>
+  const keyInput = document.getElementById('keyInput');
+  keyInput.addEventListener('keydown', function() {
+    console.log('Key pressed down!');
+  });
+  keyInput.addEventListener('keyup', function() {
+    console.log('Key released!');
+  });
+</script>
+
+The code includes creating an HTML <input> field named keyInput and adding event listeners for both 'keydown' and 'keyup' events to this input field. Whenever a user presses a key within the input field, the console logs the message 'Key pressed down!'. Similarly, upon releasing the key, the console logs 'Key released!'.
+
+B) Keypress:
+
+// <input type="text" id="pressInput">
+<script>
+  const pressInput = document.getElementById('pressInput');
+  pressInput.addEventListener('keypress', function() {
+    console.log('Key pressed!');
+  });
+</script>
+
+This code created <input> field (pressInput) in HTML and added an event listener for 'keypress' to pressInput. On pressing a key in the input field, the console logs 'Key pressed!'
+
+3) Submit events:
+Form events in JavaScript are specific events associated with HTML forms and their elements. These events enable developers to capture and respond to user interactions or changes within form elements.
+
+A) Submit event:
+Activated when a user submits the form, either by clicking a submit button or programmatically using JavaScript. This event enables developers to handle form data, perform validation, or prevent default submission behavior.
+
+// <form id="myForm">
+  <input type="text" id="textInput">
+  <input type="submit" value="Submit">
+</form>
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+    console.log('Form submitted!');
+  });
+</script>
+
+The code establishes an HTML form with a text input and a submit button. An event listener on the form captures the 'submit' event. Upon submission, the listener triggers a function preventing default behavior and logging 'Form submitted!' to the console.
+
+B) Change event:
+Used when the value of an input element within the form changes. It applies to various form elements such as text inputs, checkboxes, radio buttons, and dropdowns. This event enables real-time validation, updates, or actions based on user input changes.
+
+C) Focus event:
+Focus event triggers element attention (for example: clicks, tabs). These events are useful for providing visual cues, validation messages, or triggering actions when users interact with form elements.
+
+// <input type="text" id="textInput" placeholder="Click here">
+<script>
+  const textInput = document.getElementById('textInput');
+  textInput.addEventListener('focus', function() {
+    console.log('Input focused');
+  });
+  textInput.addEventListener('blur', function() {
+    console.log('Input blurred');
+  });
+</script>
+
+The code creates a text input in HTML with placeholder text and adds 'Focus' and 'blur' event listeners to the input. When the input gains focus, the 'focus' listener logs 'Input focused', and when it loses focus, the 'blur' listener logs 'Input blurred' to the console.
+
+4) Window events:
+Window events in JavaScript handle browser windows or document changes, triggering actions for developers to capture and respond to specific states or behaviors.
+
+A) Load event: 
+Used when the entire document and its dependent resources (like images and stylesheets) finish loading, indicating that the page is ready.
+
+<script>
+  window.addEventListener('load', function() {
+    console.log('Page and all resources loaded');
+  });
+</script>
+
+This event adds an event listener to the window object for the 'load' event. When the document and its resources finish loading, the function logs 'Page and all resources loaded' to the console.
+
+B) Resize event:
+Starts when the browser window changes size, enabling adjustments or responses to alterations in window dimensions
+
+<script>
+  window.addEventListener('resize', function() {
+    console.log('Window resized');
+  });
+</script>
+
+This code adds an event listener to the window object, listening for the 'resize' event. When the browser window resizes, triggers a function logging 'Window resized' to the console.
+
+C) Scroll event:
+It occurs when ther is the detection of scrolling actions within the document.
+
+// <div style="height: 2000px; background-color: lightblue;">
+  Scroll down
+</div>
+<script>
+  window.addEventListener('scroll', function() {
+    console.log('Document scrolled');
+  });
+</script>
+
+This code creates a <div> in HTML for scrolling and adds an event listener to the window, listening for the 'scroll' event. When the user scrolls the document view, the 'scroll' event triggers a function that logs 'Document scrolled' to the console.
