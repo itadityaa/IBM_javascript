@@ -541,3 +541,30 @@ You can loop through an array of objects to perform operations on each object. C
 You can add new objects to the array using the push method. You can also remove objects using the pop method.
 
 Array methods like filters and maps are powerful tools for working with arrays of objects. You can use them to filter and transform arrays of objects. You can search for objects within an array of objects using array methods like find.
+
+You can search for substrings within a string using methods like index of, last index of, and includes. 
+The includes method checks if the string is found within the sentence, and returns true. 
+The indexOf method returns the index or position of the first occurrence of a string in a sentence.
+
+To extract a portion of a string, you can use the substring slice or substr methods. They allow extracting specific portions based on character positions and provide flexibility. 
+
+For instance, in this code, you have a string text with the value Hello, World!. The substring method extracts a portion of the text string starting from index 0 and ending before index 5. It retrieves the characters hello. The slice method extracts a portion of the text string starting from index seven until the end. It retrieves the characters world!. The substr method extracts a substring starting from index 7 and spanning five characters. It retrieves the characters world.
+
+const text = `Hello, world!`;
+const sub1 = text.substring(0, 5); // 'Hello'
+const sub2 = text.slice(7); // 'world!'
+const sub3 = text.substr(7, 5); // 'world'
+
+The replace method is used on the text string. It finds the first occurrence of world and replaces it with universe.
+
+const updatedText = text.replace('world', 'universe'); // Hello, universe!
+
+You can split a string into an array of substrings using the split method. It is handy for parsing data separated by a specific character or sequence of characters for further processing or analysis.
+
+const csvData = `Alice, 25, NYC, 1000; Bob, 30, LA, 1500; Charlie, 35, Chicago, 2000; David, 40, Houston, 2500; Eve, 45, Boston, 3000; Frank, 50, Seattle, 3500; Grace, 55, Miami`;
+const csvArray = csvData.split("; ");
+console.log(csvArray); // ['Alice, 25, NYC, 1000', 'Bob, 30, LA, 1500', 'Charlie, 35, Chicago, 2000', 'David, 40, Houston, 2500', 'Eve, 45, Boston, 3000', 'Frank, 50, Seattle, 3500', 'Grace, 55, Miami']
+
+The trim method removes leading and trailing white space from a string. It is especially useful for cleaning and formatting user input or working with data from external sources.
+
+Template literals provide a powerful and readable way to format strings. Template literals are enclosed by backticks and allow you to embed expressions within the string using dollar sign syntax.
