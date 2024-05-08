@@ -484,3 +484,60 @@ const numbers = [10, 20, 30, 40, 50];
 const foundNumber = numbers.find(number => number > 25);
 
 console.log(foundNumber); // Output: 30
+
+A class is a blueprint or template for creating objects in JavaScript. It defines the structure and behavior by encapsulating data, or properties, and methods, or functions that are common to a group of objects.
+
+Classes provide a way to model real-world entities, bringing a level of abstraction to your code.
+
+Objects are specific instances of a class created based on the class blueprint. They represent specific entities on unique values for the properties defined in the class. Objects encapsulate state or property values and behavior or methods in a single unit.
+
+class person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(
+      `Hello, my name is ${this.name} and I am ${this.age} years old.`
+    );
+  }
+}
+
+const person1 = new person("John", 30);
+const person2 = new person("Jane", 25);
+
+person1.greet();
+person2.greet();
+
+Object literals are a way to create ad hoc objects without defining a class. JavaScript objects are prototypes and can inherit properties and methods from other objects.
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  greet: function () {
+    console.log(
+      `Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`
+    );
+  },
+};
+
+Function constructors are regular JavaScript functions used to create and initialize objects. It's a convention to name functional constructors with an initial capital letter.
+
+You can create objects using classes or object literals for one-off instances and use function constructors for structured, shared properties and methods. Function constructors are ideal for creating multiple instances of objects with common characteristics. They offer a more organized approach to object creation, aligning with object-oriented programming principles.
+
+In JavaScript, you can access objects and their properties using dot or bracket notations.
+Dot notation is the most common way to access object properties. You use a dot followed by the property name.
+Bracket notation is an alternative way to access object properties, especially useful when property names contain special characters or spaces. Bracket notation is also handy when you need to access properties dynamically, such as with variables.
+
+An array of objects is a common and powerful way to store and manage structured data in JavaScript. They allow you to organize and manipulate data in a structured manner by combining the features of both arrays and objects.
+
+Create an array of objects by placing objects inside an array using square brackets.
+
+You can access elements within an array of objects using the array index, and then you can access object properties using dot notation. You can modify objects in the array by assigning new values to their properties.
+
+You can loop through an array of objects to perform operations on each object. Common methods for iterating through arrays include for loop and array methods like foreach.
+
+You can add new objects to the array using the push method. You can also remove objects using the pop method.
+
+Array methods like filters and maps are powerful tools for working with arrays of objects. You can use them to filter and transform arrays of objects. You can search for objects within an array of objects using array methods like find.
