@@ -568,3 +568,32 @@ console.log(csvArray); // ['Alice, 25, NYC, 1000', 'Bob, 30, LA, 1500', 'Charlie
 The trim method removes leading and trailing white space from a string. It is especially useful for cleaning and formatting user input or working with data from external sources.
 
 Template literals provide a powerful and readable way to format strings. Template literals are enclosed by backticks and allow you to embed expressions within the string using dollar sign syntax.
+
+When you need randomness in your code, you can utilize the math object to generate random numbers.
+Math.random()
+
+Date objects are used to represent specific moments in time.
+const currentDate = new Date();
+const specificDate = new Date(2023, 0, 15);
+
+Timing functions are essential for controlling the flow of your Javascript code. They enable you to create delays, schedule repetitive tasks, and manage animations. There are two types of timing functions, set timeout function and set interval function.
+
+The set timeout function schedules the execution of a function after a specified delay in milliseconds.
+
+setTimeout(function () {
+  console.log("Hello from notes_helper.js");
+}, 1000); // Display after 1 second
+During the one second delay, the rest of the program continues to execute.
+
+Set interval is a built in Javascript function that schedules the repeated execution of a specified function at a specified time interval.
+
+let count = 0;
+const intervalID = setInterval(() => {
+  console.log(`Hello World ${count}`);
+  count += 1;
+  if (count === 5) {
+    clearInterval(intervalID);
+  }
+}, 1000); // Display Hello World every 1 second
+
+If the count reaches 5, the arrow function stops using the interval.
