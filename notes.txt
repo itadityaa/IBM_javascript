@@ -597,3 +597,79 @@ const intervalID = setInterval(() => {
 }, 1000); // Display Hello World every 1 second
 
 If the count reaches 5, the arrow function stops using the interval.
+
+Debugging in JavaScript is the process of of identifying and fixing errors, bugs and issues in your JavaScript code. These errors can include syntax errors, logical errors, runtime errors, and other issues that prevent your JavaScript program from functioning as intended.
+
+The simplest form of debugging involves adding console.log statements to your code. These statements allow you to print values, variables or messages to the browser's console. By examining these outputs, you can get insights into the flow of your program and the values of variables at different points in your code.
+
+Most modern web browsers come with built-in developer tools that allow you to set breakpoints in your JavaScript code. When a breakpoint is reached, the code execution stops and you can inspect variables, the call stack, and other relevant information. 
+
+You can insert the debugger statement directly into your code to halt execution and trigger the browser's debugger. This is similar to setting breakpoints, but is initiated programmatically.
+
+Every major web browser, such as Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari, includes developer tools that provide debugging capabilities. You can access these tools by pressing F12 or right-clicking on a web page and selecting inspect or inspect element. In the developer tools, navigate to the console tab for logging, sources or debugger tab for setting breakpoints, and Network tab for debugging network requests.
+
+ A try-catch block in JavaScript is a structured mechanism used for error handling. It allows you to manage and recover from runtime errors that might occur during the execution of your code.
+
+ The code that might generate an error is enclosed within a try block. This is the segment of code that you want to monitor for errors. Catch block, if an error occurs within the try-block, the catch block is executed. The catch block specifies how to handle the error. It takes an error object as a parameter which contains information about the error. The catch block can log the error, provide fallback behavior, or perform any other action to handle the error.
+
+ Catch blocks provide a place to log error information. You can log error information to the console or send them to a server for detailed analysis.  
+
+ The error object passed to the catch block contains valuable information such as the error type, message and stack trace. This information helps you understand what went wrong and where the error occurred. Catch block allows you to define fallback behavior or alternative code paths.
+
+ You can use the throw statement within a try block to throw custom expectations based on specific conditions. This enables you to provide more meaningful error information, aiding in debugging.
+
+ The document object model, or DOM, is a programming interface for web documents. It represents the web page so that programs like JavaScript can change the document structure, content, and style.
+
+ The term document refers to a web page or any XML document such as HTML, XHTML, or XML. The DOM represents this document as a structured tree-like hierarchy with each part represented as a node. An object represents a JavaScript object that corresponds to an element, attribute, or content within the web document. Each DOM element is an element of the web page, accessible and manipulable using JavaScript. The model denotes the structured and abstract representation of a web document. 
+
+ $0 is a special variable that you can use in the browser's development console as a quick reference to the currently selected DOM element in the elements panel in web development. It is often used for debugging and inspecting elements in a web page. 
+
+ Once you have the element referenced with $0, you can interact with it using JavaScript. This includes accessing its properties or modifying its attributes.
+
+DOM is a programming interface that allows JavaScript to modify web document structure, content, and style. Document refers to web pages, objects corresponding to JavaScript objects representing elements, and model signifies the structured representation for programming languages.
+
+$0 is a special console variable for referencing the currently selected DOM element for debugging and inspection. DOM has various types of nodes like document, element, text, attribute, comment, and document-type nodes. And DOM is vital for structured access to web content, creating dynamic web apps, content manipulation, and enhanced user experience, among other functionalities.
+
+Accessing the document object model or DOM means obtaining references to specific HTML elements on a web page.
+
+Accessing elements in the DOM can be done using methods like one, getElementById, two, getElementsByClassName, three, GetElementsByTagName, and four, querySelector.
+
+getElementById is a method in JavaScript used to access a specific HTML element within the DOM based on its unique ID attribute.
+
+You can use the getElementsByClassName method in JavaScript to access multiple HTML elements within the DOM that share the same class name. The result is a collection of elements stored in a variable.
+
+Use the getElementsbyTagName method in JavaScript to access multiple HTML elements within the DOM based on their tag name.
+
+querySelector is a versatile method in JavaScript used to access HTML elements within the DOM based on CSS-like selectors. 
+
+Common Methods of classList
+
+add(class1, class2, ...)
+This method adds one or more classes to the element.
+element.classList.add('newClass');
+
+remove(class1, class2, ...)
+Removes one or more classes from the element.
+element.classList.remove('oldClass');
+
+toggle(class, force)
+Toggles a class. If the class exists, it is removed; otherwise, it is added. If the second parameter is true, the class is added; if false, the class is removed.
+element.classList.toggle('active');
+
+contains(class)
+Checks if a class is present on the element. Returns true if the class exists; otherwise, it is false.
+if (element.classList.contains('special')) {
+  // Do something special
+}
+
+replace(oldClass, newClass)
+Replaces a class with another class.
+element.classList.replace('oldClass', 'newClass');
+
+item(index)
+Returns the class name at the specified index.
+const firstClass = element.classList.item(0);
+
+toString()
+Returns a string representing the element's classes.
+const classString = element.classList.toString();
