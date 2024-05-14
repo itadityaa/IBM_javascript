@@ -693,3 +693,65 @@ FirstChild and lastChild properties allow access to the first and last child nod
 Styling the DOM elements is crucial for dynamically changing the visual presentation of HTML elements on your web page using CSS properties and styles through JavaScript. This process enhances user interactions and responsiveness, helping to make changes such as altering elements, color, size, position, or visibility in response to user actions or other events. There are several methods for styling DOM elements using JavaScript. Here are some common ones: element.style.property, element.classList, element.setAttribute, element.styles.cssText, element.style.setProperty, and element.style.removeProperty. Let's explore each method in detail.
 
 elements.style.property directly modifies the inline styles of an element by setting CSS properties and values. Element.classList adds, removes, or toggles CSS classes on an element using class list. Element.setAttribute sets or modifies the entire style attribute of an element with a string containing inline CSS properties and values, element.style.cssText sets the entire inline style of an element using the CSS text property. element.styls.setProperty sets a specific CSS property. With an optional priority for an element's inline style. Ensuring it takes precedence over other styles and element.style.removeProperty removes a specific CSS property from an element's inline style, allowing you to reset or adjust styling selectively.
+
+JSON, or JavaScript object notation is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is a text-based format used for structuring data in a way that is both human readable and machine readable.
+
+JSON is widely used for exchanging data between a server and a web application or between different parts of a software system. It serves as a common language for data communication. For example, when you make an API request to a web service, the response is often in JSON format.
+
+JSON is easy for machines to parse, making it a popular choice for data serialization and deserialization. This means that software applications can easily convert JSON data into the internal data structures of the programming language and vice versa.
+
+JSON is simpler than other data interchange formats like XML. It doesn't have the complexity of tags and attributes, making it less verbose and more concise.
+
+JSON can be extended to support additional data types and structures, making it versatile for various use cases. This is typically achieved through custom objects or arrays. 
+
+JSON and objects in programming are related concepts, but they have some key differences. JSON is a text based data interchange format. It represents data as a string, which is a sequence of characters. JSON is a way to serialize and transmit data, primarily used for data exchange between systems or for storing data and files. Whereas an object is a fundamental data structure that can hold data and methods to manipulate that data. Objects are typically used to model real world entities or abstract concepts within a software application. JSON has a specific syntax and rules that must be followed. It uses key value pairs and is limited to a specific set of data types, including strings, numbers, Booleans, arrays and other JSON objects. JSON follows a strict format and keys are enclosed in double quotes. In programming, objects are not restricted to a specific syntax or set of data types. They are a part of the programming language and can include a wide variety of data types, such as integers, floats, custom data structures, and more. JSON is primarily used for data interchange. It is used to transmit data between a client and a server, between different parts of a software system or to store configuration data in files. Its main purpose is to facilitate data transfer and interoperability. While objects in programming are used to model and manipulate data within the application itself, they represent entities or concepts within the program's logic and can encapsulate both data and the methods that operate on that data. 
+
+Synchronous programming in JavaScript refers to the execution of code in a sequential and blocking manner. In a synchronous program, each operation or task is executed one after the other, and the program waits for each task to complete before moving on to the next one. This means that if one operation takes a long time to execute, it can block the entire program's execution, making it unresponsive.
+
+console.log(`Task 1`);
+console.log(`Task 2`);
+console.log(`Task 3`);
+
+This code will execute the program sequentially. If there is an error in Task 1, then the execution will halt, and we won't reach Task 2 before the error is fixed.
+
+Asynchronous programming in JavaScript is a programming paradigm that allows you to execute code without blocking the main execution thread. It enables tasks to run concurrently, making it particularly useful for handling operations that may take some time to complete, such as network requests, file I/O, or user interactions.
+
+Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes. They allow you to specify what should happen after the asynchronous task is done. Promises are objects that represent the eventual completion or failure of an asynchronous operation. They provide a cleaner and more structured way to work with asynchronous code compared to callbacks.
+
+Introduced in ES2017, ES8, async/await is a more recent way to work with asynchronous operations. It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain. JavaScript uses an event loop to manage asynchronous operations. The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
+
+Here's a basic example using the setTimeout function to illustrate asynchronous programming. In this example, start and end will be logged immediately, but delayed message will be logged after a two-second delay, because setTimeout is an asynchronous operation. This demonstrates how asynchronous programming allows non-blocking execution of code.
+
+console.log('Start');
+
+setTimeout(function () => {
+  console.log('Delayed Message');
+}, 2000); // Introduces a delay of 2 seconds
+
+console.log('End')
+
+// O/P
+Start
+End
+Delayed Message
+
+AJAX, short for asynchronous JavaScript and XML, is a set of web development techniques used to create dynamic and responsive web applications. It enables asynchronous communication between the web browser and the server, allowing data to be exchanged without requiring a full page reload. 
+
+AJAX operates asynchronously, meaning it allows the webpage to send and receive data from the server in the background while the user interacts with the page.
+
+JavaScript is the primary language used to initiate AJAX requests and handle responses. XMLHttpRequest or XHR object is the core technology enabling communication between the browser and the server. It's used to send HTTP requests and handle responses. AJAX was initially associated with XML for data transfer, but later commonly uses JSON due to its simplicity and ease of parsing.
+
+Let's delve into the details of how AJAX operates:
+ Typically, an event like a button click triggers an AJAX request within a web page. JavaScript code initiates an XMLHttpRequest object, or uses modern fetch API to send an asynchronous request to the server. The server processes the request, performs necessary operations such as database queries, and generates a response. Upon receiving the response, JavaScript processes the data and updates specific parts of the web page, often without needing a full page reload.
+
+AJAX facilitates smooth and dynamic content updates, leading to a more interactive user interface. By updating only specific portions of the page, AJAX reduces bandwidth usage and server load, enhancing performance. Users can continue interacting with the webpage while data is being fetched or processed in the background.
+
+Use cases:
+  You can use AJAX to load additional content on a page without reloading the entire page, as seen in infinite scrolling on social media platforms. It enables sending form data to the server without refreshing the entire page. AJAX plays a vital role in enabling features like live chat or stock market updates without interrupting user activity. Automatically saving feature saves user input without requiring manual submissions.
+
+AJAX best practices:
+  Robust error handling mechanisms are essential to manage failed requests or timeouts. Implementing retries or fallback strategies ensures a smoother user experience. Cross-site scripting, XSS, and other security vulnerabilities should be considered when implementing AJAX. Implementing proper authentication and encryption measures is crucial. Understanding and addressing cross-origin restrictions by using cores, cross-origin resource sharing headers, when making requests to different domains.
+
+XMLHttpRequest (XHR) is a JavaScript API that enables communication between a web browser and a server. It allows for making HTTP requests to retrieve data from a server or send data to a server in the background without reloading the entire web page.
+
+You can create an XHR object by following a step-by-step guide explaining the associated properties and method. You can use XMLHttpRequest to fetch data from external APIs or servers managing different data formats such as JSON or XML. With XHR, you can utilize event listeners to handle responses, including response codes like success or failure. Additionally, you can dynamically update web page content based on the received data. You can effectively manage errors and timeouts with XMLHttpRequest. You can use XMLHttpRequest to retrieve data securely, addressing concerns such as cross-origin request.
