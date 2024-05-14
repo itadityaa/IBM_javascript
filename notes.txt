@@ -716,6 +716,22 @@ This code will execute the program sequentially. If there is an error in Task 1,
 
 Asynchronous programming in JavaScript is a programming paradigm that allows you to execute code without blocking the main execution thread. It enables tasks to run concurrently, making it particularly useful for handling operations that may take some time to complete, such as network requests, file I/O, or user interactions.
 
+async function fetchData() {
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+}
+
+function readFileAsync(path, callback) {
+  fs.readFile(path, 'utf8', (err, data) => { // The readFile function from the fs (File System) module is used to read the contents of a file asynchronously. This is the asynchronous operation in the example.
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, data);
+    }
+  });
+}
+
 Callbacks are functions that are passed as arguments to other functions and are executed at a later time, typically when an asynchronous operation completes. They allow you to specify what should happen after the asynchronous task is done. Promises are objects that represent the eventual completion or failure of an asynchronous operation. They provide a cleaner and more structured way to work with asynchronous code compared to callbacks.
 
 Introduced in ES2017, ES8, async/await is a more recent way to work with asynchronous operations. It allows you to write asynchronous code in a more synchronous-looking style, making it easier to read and maintain. JavaScript uses an event loop to manage asynchronous operations. The event loop continuously checks the message queue for tasks that need to be executed, and runs them in the order they were added.
@@ -755,3 +771,100 @@ AJAX best practices:
 XMLHttpRequest (XHR) is a JavaScript API that enables communication between a web browser and a server. It allows for making HTTP requests to retrieve data from a server or send data to a server in the background without reloading the entire web page.
 
 You can create an XHR object by following a step-by-step guide explaining the associated properties and method. You can use XMLHttpRequest to fetch data from external APIs or servers managing different data formats such as JSON or XML. With XHR, you can utilize event listeners to handle responses, including response codes like success or failure. Additionally, you can dynamically update web page content based on the received data. You can effectively manage errors and timeouts with XMLHttpRequest. You can use XMLHttpRequest to retrieve data securely, addressing concerns such as cross-origin request.
+
+A callback is a function passed as an argument to another function and executed later or after a specific event occurs. JavaScript commonly uses callbacks to handle asynchronous operations such as event handling, timers, and user interactions.
+
+Sync:
+const names = ["Alice", "Bob", "Charlie"];
+
+function getNames(array, cb) { // cb is a callback function
+  array.forEach((element) => { // forEach is a method that calls a function once for each element in an array
+    cb(element); 
+  });
+}
+
+getNames(names, (name) => { 
+  console.log(name); 
+});
+
+Async:
+const names = ["Alice", "Bob", "Charlie"];
+
+function getNamesAsync(array, cb) { // cb is a callback function
+  setTimeout(() => { // Simulating an asynchronous operation
+    array.forEach((element) => { // forEach is a method that calls a function once for each element in an array
+      cb(element); 
+    });
+  }, 0); // Using a timeout of 0 milliseconds to make it asynchronous
+}
+
+getNamesAsync(names, (name) => { 
+  console.log(name); 
+});
+
+Promises are a powerful and flexible way to work with asynchronous operations in JavaScript. They represent a value that may not be available yet, but will be in the future. You can use promises for tasks like fetching data from a server, reading files, or performing other operations that may take time to complete.
+
+Promises have three states. Pending is the initial state when you create the promise and the asynchronous operation is in progress. Fulfilled is when the asynchronous operation is completed and the result is available. Rejected is the state when the asynchronous operation encounters an error or is unsuccessful.
+
+You can create promises using the promise constructor, providing a method to handle the results once the asynchronous operation is complete.
+
+The promise constructor takes a function as an argument with two parameters, resolve and reject. Calling a resolve function indicates completion of the asynchronous operation, and it provides the result of that operation. A reject function, when called, indicates that an error has occurred during the asynchronous operation, and it provides the error information.
+
+After creating the promise, you can use the then method to specify what should happen when the promise is resolved or rejected. Then, the method takes two callback functions as arguments. The first callback function executes when the promise resolves, it receives the result provided by the resolve function. The second callback function executes when the promise is rejected and receives the error information the reject function provides.
+
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous code
+  // If successful, call resolve()
+  // If unsuccessful, call reject()
+});
+
+myPromise.then(
+  () => {
+    // Code to run if the promise is resolved
+  },
+  () => {
+    // Code to run if the promise is rejected
+  }
+);
+
+// Define a function that returns a promise
+function getData() {
+  // Create a new promise
+  return new Promise((resolve, reject) => {
+    // Simulate an asynchronous operation (e.g., fetching data)
+    setTimeout(() => {
+      // Simulate a successful response
+      const data = { id: 1, title: "Sample note" };
+
+      // Check if the data was retrieved successfully
+      if (data) {
+        // Resolve the promise with the data
+        resolve(data);
+      } else {
+        // Reject the promise with an error message
+        reject("Failed to fetch data");
+      }
+    }, 2000); // Simulating a delay of 2 seconds
+  });
+}
+
+// Call the function that returns a promise
+console.log("Fetching data...");
+getData()
+  // Handle the resolved promise (success case)
+  .then((data) => {
+    console.log("Data successfully fetched:", data);
+  })
+  // Handle the rejected promise (error case)
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+
+Advantages:
+  The key advantage of using promises is that they allow you to handle asynchronous operations linearly without needing deeply nested callbacks. This code structure makes understanding and maintaining asynchronous code easier. Which is partially important in real world scenarios involving API requests, data processing, and updating the user interface, UI.
+
+The Fetch API is a modern built-in JavaScript interface for making network requests, typically used for fetching resources from the web, such as data from a server or an API. It provides a more flexible and powerful way to work with HTTP requests than older techniques, like XML HTTP request. 
+
+characteristics:
+  The Fetch API promises cleaner and more structured handling of asynchronous operations. It's straightforward and easy to use syntax, facilitating the setup, sending, and handling of requests. Lastly, the Fetch API supports a range of HTTP request methods, including GET, POST, PUT, DELETE, and others.
+
