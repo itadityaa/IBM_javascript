@@ -1,11 +1,8 @@
-// d97ed6798e3d13ed6c5a05050e4fef34;
-// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-
 function showWeatherDetails(event) {
   event.preventDefault();
 
   const city = document.getElementById("city").value;
-  const apiKey = "d97ed6798e3d13ed6c5a05050e4fef34";
+  const apiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   fetch(apiUrl)

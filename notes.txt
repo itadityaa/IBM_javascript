@@ -868,3 +868,26 @@ The Fetch API is a modern built-in JavaScript interface for making network reque
 characteristics:
   The Fetch API promises cleaner and more structured handling of asynchronous operations. It's straightforward and easy to use syntax, facilitating the setup, sending, and handling of requests. Lastly, the Fetch API supports a range of HTTP request methods, including GET, POST, PUT, DELETE, and others.
 
+Axios is a popular JavaScript library used to make HTTP requests from the browser. It provides a simple and consistent API for making asynchronous HTTP requests to interact with RESTful APIs or other web services.
+
+axios({
+  method: "HTTP_METHOD",
+  url: "URL",
+  headers: {
+    // Headers (if any)
+    // 'Authorization': 'Bearer ' + token
+    // 'Content-Type': 'application/json'
+    // 'Accept': 'application/json'
+  },
+  data: {
+    // Data to be sent
+  },
+})
+  .then((response) => {
+    // Handle response
+  })
+  .catch((error) => {
+    // Handle error
+  });
+
+Method refers to the HTTP method for the request like get, post, put, or delete. URL specifies the URL of the resource you want to request from the server. Header is an object that shows you to specify custom headers for the request such as authorization or content type headers. Data represents the request data typically used for post, put, and more. Depending on the content type, it can be an object or a string. The dot then method handles the successful response from the server. It receives a response object that contains the response data, headers and status information. Dot catch method handles errors. It receives an error object with details such as a network time out or server error.
