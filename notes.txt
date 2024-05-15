@@ -891,3 +891,36 @@ axios({
   });
 
 Method refers to the HTTP method for the request like get, post, put, or delete. URL specifies the URL of the resource you want to request from the server. Header is an object that shows you to specify custom headers for the request such as authorization or content type headers. Data represents the request data typically used for post, put, and more. Depending on the content type, it can be an object or a string. The dot then method handles the successful response from the server. It receives a response object that contains the response data, headers and status information. Dot catch method handles errors. It receives an error object with details such as a network time out or server error.
+
+FETCH VS AXIOS
+Fetch is a built-in web API in modern browsers. It provides a basic interface for making HTTP requests and is available natively in the browser. It returns promises for asynchronous operations. Meanwhile, Axios is a separate library you must include in your project. It provides a more convenient and high-level API for making HTTP requests. Axios also returns promises for asynchronous operations, but is not built into the browser, so you must include it explicitly. Modern browsers widely support fetch, but may not be available in older browsers without a polyfill. Conversely, Axios is designed to work consistently across different browsers and has better compatibility, including support for older versions of Internet Explorer. Fetch requires more manual configuration of headers and request options, and you need to call additional methods to parse the response body. Axios offers a more intuitive and higher-level API for request configuration and response handling. It automatically parses the response based on the specified data type. Fetch requires explicitly checking the response status and throwing errors for non-okay statuses. Error handling can be more complex and may involve custom logic. Meanwhile, Axios automatically handles response status checks and treats non-okay responses as errors. It provides a more streamlined error-handling process. Fetch does not have built-in support for request cancellation, which can be important when you need to cancel ongoing requests. Whereas Axios provides built-in support for request cancellation using cancel tokens. Fetch does not have built-in interceptor support, so you need to handle these tasks separately. Axios allows you to define requests and response interceptors for tasks like authentication, logging, or global error handling. Fetch requires you to apply these settings to each request manually. Meanwhile, Axios allows you to set global defaults and configurations for headers, base URLs, and other request parameters, making it easier to maintain consistency in your API calls.
+
+Module 4 Summary: JavaScript Async
+
+JSON or JavaScript Object Notation is a lightweight, human-readable, and machine-readable data interchange format.
+
+JSON utilizes key-value pairs and arrays, providing simplicity for both developers and non-developers.
+
+AJAX, or Asynchronous JavaScript and XML, revolutionizes web development by facilitating dynamic and responsive applications.
+
+Advantages of using AJAX include enhanced user interfaces, reduced server load, and uninterrupted user interactions.
+
+Common uses range from dynamic content loading to real-time updates and auto-saving features in social media and e-commerce platforms.
+
+XMLHttpRequest or XHR is a JavaScript API facilitating communication between web browsers and servers.
+
+XMLHttpRequest enables asynchronous HTTP requests, allowing data retrieval or submission without reloading the entire webpage.
+
+Callbacks are functions passed as arguments, executed later or after specific events.
+
+Promises offer a powerful way to handle asynchronous operations.
+
+You can create promises using the promise constructor, taking resolve and reject functions.
+
+The fetch API is a modern JavaScript interface that offers a flexible and powerful approach to fetching resources from the web.
+
+The fetch API supports various HTTP request methods, including GET, POST, PUT, DELETE, PATCH, and OPTIONS.
+
+Axios offers a clean and consistent API for asynchronous interactions with RESTful APIs or web services.
+
+Axios streamlines the process of making HTTP requests, providing a user-friendly interface and additional features that enhance the overall development experience compared to native solutions like Fetch. 
