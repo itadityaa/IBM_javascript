@@ -924,3 +924,53 @@ The fetch API supports various HTTP request methods, including GET, POST, PUT, D
 Axios offers a clean and consistent API for asynchronous interactions with RESTful APIs or web services.
 
 Axios streamlines the process of making HTTP requests, providing a user-friendly interface and additional features that enhance the overall development experience compared to native solutions like Fetch. 
+
+*************************************************************************************************************************
+
+React
+A framework is a comprehensive software development platform that provides the foundation and structure for building entire applications. Unlike libraries that offer specific functionalities, frameworks impose a particular architecture and provide tools, libraries, and guidelines to streamline the development process. Frameworks address broader concerns, including handling user requests, managing data flow, and structuring the application's overall architecture. Some popular examples of JavaScript frameworks include AngularJS, Ember JS, Svelte, and Vue.js.
+
+The prominent features of React include component-based architecture, declarative syntax, Virtual DOM, One-way data binding, JavaScript XML (JSX), and hook employment.
+
+React's flexible component-based architecture enables the creation of reusable UI elements.
+
+In React, developers build UIs by composing independent components representing a specific web page feature.
+
+For example, developers can divide a website with headers, left and right sidebars, or footers. This modular approach allows developers to encapsulate UI functionality in individual files, making it easy to reuse components across multiple pages without duplicating the code.
+
+React uses a declarative syntax that updates how the UI should behave when data or states change. This declarative paradigm lets developers focus only on specifying the intended UI behavior, while React efficiently manages the underlying DOM.
+
+ In essence, developers instruct React on what to do rather than how to do it.
+
+ React also utilizes a virtual DOM instead of direct manipulation. React generates virtual DOM copies when changes occur in any component and then compares them with the real DOM, updating only the essential segments. This strategy optimizes performance and improves speed by minimizing unnecessary DOM modifications.
+
+ React implements one-way data binding, ensuring data flows unidirectionally from parent to child components. This approach simplifies data management, reducing the risk of bugs caused by an inconsistent state.
+
+ React also utilizes JSX, JavaScript XML, a JavaScript syntax extension enabling HTML-like code within JavaScript. JSX makes creating and visualizing UI components easier.
+
+ React employs hooks, a feature introduced in React 16.8. Hooks allow developers to handle states and other React features seamlessly, eliminating the need for class-based coding. Hooks simplify component logic, promote code reuse, and make it easier to manage stateful behavior.
+
+-------------------------------------------------------------------------------------------------------------------------
+ES is short for EcmaScript. Ecma is a standards organization that creates a wide range of global information and communications technology standards. JavaScript adheres to Ecma’s specification ES6, which came out in 2015.
+
+Object-oriented programming was made feasible in JavaScript with the introduction of class. Class is a template or blueprint for creating objects. Classes in JavaScript are built on prototypes. Prototype is a property of all JavaScript objects, including functions. A function can be used to create an object instance.
+
+In JavaScript ES6, a class can inherit from another class. The class that is inheriting one other class is called the subclass. The superclass is the class being inherited by the subclass. The subclass inherits all the attributes and methods of the superclass.
+
+React components use inheritance to build user-defined components. The subclass has a special privilege to call the superclass constructor with the super() method call. 
+
+There are several advantages to using TypeScript rather than JavaScript in your React application and possibly a few drawbacks. Regarding advantages:
+
+TypeScript makes it easy to define Prop types in React. This makes writing code with an IDE that supports code completion a breeze since the IDE automatically populates the Prop type.
+
+Most common third-party libraries support TypeScript definitions.
+
+As mentioned, TypeScript has static type-checking, which enables you to help identify errors earlier in the development process.
+
+Refactoring code becomes easier since types are known.
+
+There will be fewer “undefined” errors at run-time due to type-checking at compile time.
+
+Code is easier to read and maintain than JavaScript due to typed variables.
+
+You can still write JavaScript and use the TypeScript compiler.
