@@ -974,3 +974,26 @@ There will be fewer “undefined” errors at run-time due to type-checking at c
 Code is easier to read and maintain than JavaScript due to typed variables.
 
 You can still write JavaScript and use the TypeScript compiler.
+
+JSX or JavaScript Syntax Extension or JavaScript XML is an extension to JavaScript. It provides an easier way to create user interface or UI components in React.
+
+JSX produces React “elements” that can be used to render the component to Document Object Model or DOM. The JSX syntax is like an XML or HTML-like syntax used by React that extends ECMAScript that is a standard used for client-side scripting.
+
+The JSX syntax is intended to be used by preprocessors, for example, transpilers or compiler like Babel, to transform HTML-like text found in JavaScript files into standard JavaScript objects. These objects can then be parsed by a JavaScript engine.
+
+const el1 = <h1>This is a sample JSX code snippet</h1>
+Like HTML uses tags
+Like JS uses constructs (const el1 = )
+
+JSX is basically a syntax extension of regular JavaScript and is used to create React elements. These elements are then rendered to the React Document Object Model or DOM.
+
+JSX makes React code much easier to read, write, and understand.
+
+Benefits of using JSX:
+- Less technical people can understand and modify the required parts. 
+- CSS developers and designers will find JSX more familiar than JavaScript alone. 
+- You can also leverage the full power of JavaScript in HTML and avoid learning or using a templating language. 
+- By adding a JSX transformation step you'll find errors in your HTML you might otherwise miss. 
+- JSX promotes the idea of inline styles. When writing large pieces of code, JSX helps you in keeping your code simple and elegant.
+-  Also JSX is faster than normal JavaScript as it performs optimizations while translating to regular JavaScript.
+- JSX takes care of the usual output sanitization issues to prevent attacks such as cross-site scripting.
