@@ -1094,3 +1094,15 @@ Now we can use the employee_designation in the employeeDetails.jxs as follows:
 const {employee_designation} = this.props;
 
 Event handling in React is responding to user interactions such as clicks, mouseover, mouse out, form submissions, and so on, within a React application. 
+
+- React is an efficient, flexible JavaScript library for building user interfaces. 
+
+- New features introduced in JavaScript as a part of ES6 are let, const, arrow functions, promise, and class. 
+
+- The main benefits of using JSX are that you can leverage the full power of JavaScript in HTML and avoid learning or using a templating language. It allows React to show useful error and warning messages. 
+
+- The four types of React components are Functional, Class, Pure, and High-order component. 
+
+- Functional components are most useful when the lifecycle of the component doesn’t have to be managed. 
+
+- Class components are more versatile.
