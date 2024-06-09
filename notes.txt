@@ -1106,3 +1106,47 @@ Event handling in React is responding to user interactions such as clicks, mouse
 - Functional components are most useful when the lifecycle of the component doesn’t have to be managed. 
 
 - Class components are more versatile.
+
+Pure component type (4th component type)
+In the context of React, a "pure component" typically refers to a component that only re-renders when its props or state change. 
+
+Performance Optimization: By preventing unnecessary re-renders, pure components can improve the performance of your application.
+Predictability: Pure components re-render only when their inputs (props or state) change, making their behavior more predictable.
+
+Properties can't be passed as parameters to the function.
+
+Functional components in React receive properties (props) as parameters to the function. These props contain the data passed down from parent components. However, unlike class components, functional components do not have access to the this keyword and cannot use the props property. Instead, they directly accept props as arguments in their function signature.
+
+JSX converts HTML tags into React elements and makes it easier to write React applications.
+
+Lifecycle methods functionality can be added by implementing React Hooks in functional components.
+
+In React, lifecycle methods are special methods that are automatically invoked at specific points in the lifecycle of a component. These methods allow you to hook into various stages of a component's existence, such as when it is initialized, rendered, updated, or removed from the DOM.
+
+The lifecycle of a React component can be divided into three main phases:
+
+- Mounting: This phase occurs when an instance of a component is being created and inserted into the DOM.
+
+constructor(): This method is called before the component is mounted. It is used for initializing state and binding event handlers.
+
+static getDerivedStateFromProps(): This is a static method that is called just before rendering when new props or state are received. It is used to update the state based on changes in props.
+
+render(): This method is required and is responsible for rendering the component's UI.
+
+componentDidMount(): This method is called after the component has been mounted and is rendered for the first time. It is commonly used to perform initial setup, such as fetching data from an API.
+
+- Updating: This phase occurs when a component is re-rendered as a result of changes to its props or state.
+
+static getDerivedStateFromProps(): This method is also called during the updating phase.
+
+shouldComponentUpdate(): This method is called before re-rendering the component. It allows you to control whether the component should update or not based on changes in props or state.
+
+render(): The render method is called again to re-render the component with updated props or state.
+
+getSnapshotBeforeUpdate(): This method is called just before the DOM is updated. It allows you to capture some information from the DOM before it changes, such as scroll position.
+
+componentDidUpdate(): This method is called after the component has been updated and re-rendered. It is commonly used to perform side effects, such as updating the DOM or making additional API calls.
+
+- Unmounting: This phase occurs when a component is removed from the DOM.
+
+componentWillUnmount(): This method is called just before the component is removed from the DOM. It is used to perform cleanup, such as removing event listeners or cancelling network requests.
